@@ -1,0 +1,52 @@
+{
+  "name": "sa-ui",
+  "author": {
+    "email": "fabian@saali.info",
+    "name": "saali"
+  },
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sa-ui.umd.cjs",
+  "module": "./dist/sa-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sa-ui.js",
+      "require": "./dist/sa-ui.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.3.1",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.29",
+    "vue-tsc": "^3.2.5"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.575.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwind-variants": "^3.2.2"
+  }
+}

@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Brand: Primary ─── */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-soft: #eff6ff;
+
+  /* ─── Brand: Secondary ─── */
+  --color-secondary: #dbeafe;
+  --color-secondary-hover: #bfdbfe;
+  --color-secondary-text: #1e3a5f;
+
+  /* ─── Brand: Tertiary ─── */
+  --color-tertiary-border: #60a5fa;
+  --color-tertiary-hover: #eff6ff;
+  --color-tertiary-text: #60a5fa;
+
+  /* ─── Neutral: Surface (Backgrounds) ─── */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+
+  /* ─── Neutral: Border ─── */
+  --color-border: #e5e7eb;
+  --color-border-strong: #9ca3af;
+  --color-border-focus: #3b82f6;
+
+  /* ─── Neutral: Foreground (Text) ─── */
+  --color-heading: #111827;
+  --color-body: #4b5563;
+  --color-muted: #9ca3af;
+  --color-on-primary: #ffffff;
+
+  /* ─── Status ─── */
+  --color-success-soft: #dcfce7;
+  --color-success-text: #166534;
+  --color-error-soft: #fee2e2;
+  --color-error-text: #991b1b;
+  --color-warning-soft: #fef3c7;
+  --color-warning-text: #92400e;
+  --color-info-soft: #dbeafe;
+  --color-info-text: #1e40af;
+}
