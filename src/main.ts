@@ -1,46 +1,135 @@
-import SaBadge from "./components/SaBadge.vue";
-import SaBreadcrumb from "./components/SaBreadcrumb.vue";
-import SaButton from "./components/SaButton.vue";
-import SaCalendar from "./components/SaCalendar.vue";
-import SaCard from "./components/SaCard.vue";
-import SaCheckbox from "./components/SaCheckbox.vue";
-import SaDropdown from "./components/SaDropdown.vue";
-import SaInput from "./components/SaInput.vue";
-import SaModal from "./components/SaModal.vue";
-import SaStepper from "./components/SaStepper.vue";
-import SaToast from "./components/SaToast.vue";
-import SaUploadArea from "./components/SaUploadArea.vue";
-import SaTabs from "./components/SaTabs.vue";
-import SaAccordion from "./components/SaAccordion.vue";
-import SaSpinner from "./components/SaSpinner.vue";
-import SaTable from "./components/SaTable.vue";
-import SaTooltip from "./components/SaTooltip.vue";
-import SaCarousel from "./components/SaCarousel.vue";
-import SaSkeleton from "./components/SaSkeleton.vue";
+import type { App } from "vue";
+
+// ─── Components ───
+import SaAccordion from "./components/SaAccordion/SaAccordion.vue";
+import SaAlert from "./components/SaAlert/SaAlert.vue";
+import SaAvatar from "./components/SaAvatar/SaAvatar.vue";
+import SaBadge from "./components/SaBadge/SaBadge.vue";
+import SaBreadcrumb from "./components/SaBreadcrumb/SaBreadcrumb.vue";
+import SaButton from "./components/SaButton/SaButton.vue";
+import SaCalendar from "./components/SaCalendar/SaCalendar.vue";
+import SaCard from "./components/SaCard/SaCard.vue";
+import SaCarousel from "./components/SaCarousel/SaCarousel.vue";
+import SaCheckbox from "./components/SaCheckbox/SaCheckbox.vue";
+import SaDivider from "./components/SaDivider/SaDivider.vue";
+import SaDropdown from "./components/SaDropdown/SaDropdown.vue";
+import SaFormField from "./components/SaFormField/SaFormField.vue";
+import SaInput from "./components/SaInput/SaInput.vue";
+import SaModal from "./components/SaModal/SaModal.vue";
+import SaPagination from "./components/SaPagination/SaPagination.vue";
+import SaProgress from "./components/SaProgress/SaProgress.vue";
+import SaRadio from "./components/SaRadio/SaRadio.vue";
+import SaSkeleton from "./components/SaSkeleton/SaSkeleton.vue";
+import SaSpinner from "./components/SaSpinner/SaSpinner.vue";
+import SaStepper from "./components/SaStepper/SaStepper.vue";
+import SaSwitch from "./components/SaSwitch/SaSwitch.vue";
+import SaTable from "./components/SaTable/SaTable.vue";
+import SaTabs from "./components/SaTabs/SaTabs.vue";
+import SaTag from "./components/SaTag/SaTag.vue";
+import SaTextarea from "./components/SaTextarea/SaTextarea.vue";
+import SaToast from "./components/SaToast/SaToast.vue";
+import SaTooltip from "./components/SaTooltip/SaTooltip.vue";
+import SaUploadArea from "./components/SaUploadArea/SaUploadArea.vue";
 import "./styles/tailwind.css";
 
-// Export für Library-Build
-export {
+// ─── All components for plugin registration ───
+const components = {
+  SaAccordion,
+  SaAlert,
+  SaAvatar,
   SaBadge,
   SaBreadcrumb,
   SaButton,
   SaCalendar,
   SaCard,
+  SaCarousel,
   SaCheckbox,
+  SaDivider,
   SaDropdown,
+  SaFormField,
   SaInput,
   SaModal,
-  SaStepper,
-  SaToast,
-  SaUploadArea,
-  SaTabs,
-  SaAccordion,
-  SaSpinner,
-  SaTable,
-  SaTooltip,
-  SaCarousel,
+  SaPagination,
+  SaProgress,
+  SaRadio,
   SaSkeleton,
+  SaSpinner,
+  SaStepper,
+  SaSwitch,
+  SaTable,
+  SaTabs,
+  SaTag,
+  SaTextarea,
+  SaToast,
+  SaTooltip,
+  SaUploadArea,
+} as const;
+
+// ─── Vue Plugin ───
+export const SaUI = {
+  install(app: App) {
+    for (const [name, component] of Object.entries(
+      components as Record<
+        string,
+        ReturnType<(typeof import("vue"))["defineComponent"]>
+      >,
+    )) {
+      app.component(name, component);
+    }
+  },
 };
+
+export default SaUI;
+
+// ─── Named component exports ───
+export {
+  SaAccordion,
+  SaAlert,
+  SaAvatar,
+  SaBadge,
+  SaBreadcrumb,
+  SaButton,
+  SaCalendar,
+  SaCard,
+  SaCarousel,
+  SaCheckbox,
+  SaDivider,
+  SaDropdown,
+  SaFormField,
+  SaInput,
+  SaModal,
+  SaPagination,
+  SaProgress,
+  SaRadio,
+  SaSkeleton,
+  SaSpinner,
+  SaStepper,
+  SaSwitch,
+  SaTable,
+  SaTabs,
+  SaTag,
+  SaTextarea,
+  SaToast,
+  SaTooltip,
+  SaUploadArea,
+};
+
+// ─── Type exports ───
+export type {
+  AccordionItem,
+  BreadcrumbItem,
+  DropdownOption,
+  TabItem,
+  TableColumn,
+  StepperStep,
+  ToastType,
+  ToastMessage,
+  ToastPosition,
+  RadioOption,
+} from "./types";
+
+// ─── Composable exports ───
+export { useClickOutside } from "./composables";
 
 // Dev-Playground (nur für pnpm dev)
 if (import.meta.env.DEV) {
