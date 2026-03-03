@@ -39,7 +39,9 @@ describe("SaToast", () => {
       props: { position: "top-right" },
       attachTo: document.body,
     });
-    expect(typeof (wrapper.vm as unknown as ToastExposed).remove).toBe("function");
+    expect(typeof (wrapper.vm as unknown as ToastExposed).remove).toBe(
+      "function",
+    );
   });
 
   it("exposes clear method", () => {
@@ -47,7 +49,9 @@ describe("SaToast", () => {
       props: { position: "top-right" },
       attachTo: document.body,
     });
-    expect(typeof (wrapper.vm as unknown as ToastExposed).clear).toBe("function");
+    expect(typeof (wrapper.vm as unknown as ToastExposed).clear).toBe(
+      "function",
+    );
   });
 
   it("adds a toast via exposed method", async () => {
