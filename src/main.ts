@@ -130,12 +130,3 @@ export type {
 
 // ─── Composable exports ───
 export { useClickOutside } from "./composables";
-
-// Dev-Playground (nur für pnpm dev)
-if (import.meta.env.DEV) {
-  import("vue").then(({ createApp }) => {
-    import("./App.vue").then(({ default: App }) => {
-      createApp(App).mount("#app");
-    });
-  });
-}

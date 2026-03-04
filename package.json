@@ -1,6 +1,7 @@
 {
   "name": "@saali2901/sa-ui",
   "description": "Vue.js free to use UI-Library",
+  "keywords": ["UI", "Vue", "Vue.js", "UI-Library", "Tailwind", "CSS", "Components", "Free"],
   "author": {
     "email": "fabian@saali.info",
     "name": "saali"
@@ -14,12 +15,18 @@
   "module": "./dist/sa-ui.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/sa-ui.js",
       "require": "./dist/sa-ui.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": ["./dist/index.d.ts"]
+    }
+  },
   "sideEffects": [
     "**/*.css"
   ],
