@@ -64,3 +64,9 @@ export interface RadioOption {
   label: string;
   disabled?: boolean;
 }
+
+// ─── SegmentedControl ───
+export interface SegmentedControlOption {
+  value: string | number;
+  label: string;
+}

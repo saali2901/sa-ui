@@ -30,6 +30,9 @@ import SaTextarea from "./components/SaTextarea/SaTextarea.vue";
 import SaToast from "./components/SaToast/SaToast.vue";
 import SaTooltip from "./components/SaTooltip/SaTooltip.vue";
 import SaUploadArea from "./components/SaUploadArea/SaUploadArea.vue";
+import SaSlider from "./components/SaSlider/SaSlider.vue";
+import SaNumberInput from "./components/SaNumberInput/SaNumberInput.vue";
+import SaSegmentedControl from "./components/SaSegmentedControl/SaSegmentedControl.vue";
 import "./styles/tailwind.css";
 
 // ─── All components for plugin registration ───
@@ -63,6 +66,9 @@ const components = {
   SaToast,
   SaTooltip,
   SaUploadArea,
+  SaSlider,
+  SaNumberInput,
+  SaSegmentedControl,
 } as const;
 
 // ─── Vue Plugin ───
@@ -112,6 +118,9 @@ export {
   SaToast,
   SaTooltip,
   SaUploadArea,
+  SaSlider,
+  SaNumberInput,
+  SaSegmentedControl,
 };
 
 // ─── Type exports ───
@@ -126,6 +135,7 @@ export type {
   ToastMessage,
   ToastPosition,
   RadioOption,
+  SegmentedControlOption,
 } from "./types";
 
 // ─── Composable exports ───

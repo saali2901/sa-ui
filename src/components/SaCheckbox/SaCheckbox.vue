@@ -32,7 +32,7 @@ const wrapperVariants = tv({
 });
 
 const boxVariants = tv({
-  base: "relative w-4 h-4 border border-border-strong duration-200 flex items-center justify-center",
+  base: "relative w-4 h-4 rounded border border-border-strong duration-200 flex items-center justify-center shrink-0",
   variants: {
     checked: {
       true: "bg-primary border-primary",
@@ -68,7 +68,7 @@ const boxVariants = tv({
         />
       </svg>
     </div>
-    <span v-if="label" class="text-sm text-muted">
+    <span v-if="label" class="text-sm text-body">
       {{ label }}
     </span>
   </label>

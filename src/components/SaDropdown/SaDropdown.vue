@@ -39,10 +39,10 @@ const displayValue = computed(() => {
 });
 
 const triggerVariants = tv({
-  base: "flex items-center justify-between w-full border p-2 cursor-pointer duration-200 text-sm bg-surface",
+  base: "flex items-center justify-between w-full border p-2 cursor-pointer duration-200 text-sm bg-surface rounded-md",
   variants: {
     open: {
-      true: "border-border-focus",
+      true: "border-border-focus rounded-b-none",
       false: "border-border-strong",
     },
     disabled: {
@@ -55,7 +55,7 @@ const optionVariants = tv({
   base: "px-4 py-2.5 cursor-pointer duration-150 text-sm",
   variants: {
     selected: {
-      true: "bg-secondary text-primary font-medium",
+      true: "bg-surface-hover text-heading font-medium",
       false: "text-body hover:bg-surface-hover",
     },
     highlighted: {
@@ -157,7 +157,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 
 <template>
   <div class="relative w-full" ref="dropdownRef">
-    <label v-if="label" class="block text-sm text-muted">
+    <label v-if="label" class="block uppercase text-xs font-medium tracking-wide text-muted mb-1.5">
       {{ label }}
     </label>
 
@@ -172,7 +172,7 @@ const handleKeydown = (event: KeyboardEvent) => {
     >
       <span
         class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap"
-        :class="selectedOption ? 'text-primary' : 'text-muted'"
+        :class="selectedOption ? 'text-heading' : 'text-muted'"
       >
         {{ displayValue }}
       </span>
@@ -192,7 +192,7 @@ const handleKeydown = (event: KeyboardEvent) => {
     >
       <ul
         v-if="isOpen"
-        class="absolute top-full left-0 right-0 z-50 mt-1 py-1 list-none bg-surface border border-border shadow max-h-60 overflow-y-auto"
+        class="absolute top-full left-0 right-0 z-50 py-1 list-none bg-surface border border-border rounded-b-md shadow-sm max-h-60 overflow-y-auto"
         role="listbox"
       >
         <li

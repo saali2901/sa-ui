@@ -19,12 +19,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const skeletonVariants = tv({
-  base: "animate-pulse bg-surface-hover",
+  base: "animate-pulse bg-surface-hover rounded-md",
   variants: {
     variant: {
-      text: "h-4 rounded",
+      text: "h-4",
       circle: "rounded-full",
-      rectangular: "rounded",
+      rectangular: "",
     },
   },
 });

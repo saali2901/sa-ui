@@ -132,7 +132,7 @@ const goToToday = () => {
 </script>
 
 <template>
-  <div class="w-full max-w-sm border border-border bg-surface p-5">
+  <div class="w-full max-w-sm border border-border-strong bg-surface rounded-md p-5">
     <!-- Header with month navigation -->
     <div class="mb-6 flex items-center justify-between">
       <button
@@ -162,7 +162,7 @@ const goToToday = () => {
     <div class="mb-4">
       <button
         @click="goToToday"
-        class="w-full px-3 py-1 text-sm text-primary hover:bg-primary-soft transition-colors"
+        class="w-full px-3 py-1 text-sm text-body hover:bg-surface-hover transition-colors"
       >
         {{ todayLabel }}
       </button>
@@ -187,14 +187,14 @@ const goToToday = () => {
         @click="day && selectDate(day)"
         :disabled="day ? isDisabled(day) : true"
         :class="[
-          'aspect-square text-sm font-medium transition-colors',
+          'aspect-square text-sm font-medium transition-colors rounded-md',
           day === null && 'cursor-default',
           day !== null && !isDisabled(day) && 'cursor-pointer',
           day !== null && isDisabled(day) && 'cursor-not-allowed opacity-40',
           day && isSelected(day)
             ? 'bg-primary text-on-primary font-semibold'
             : day && isToday(day)
-              ? 'bg-primary-soft text-primary font-semibold'
+              ? 'bg-surface-hover text-heading font-semibold'
               : day && !isDisabled(day)
                 ? 'text-body hover:bg-surface-hover'
                 : '',

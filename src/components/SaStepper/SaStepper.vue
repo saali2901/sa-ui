@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
       >
         <!-- Circle -->
         <div
-          class="text-xl w-12 h-12 rounded-full border border-border flex items-center justify-center text-body font-semibold"
+          class="text-xl w-12 h-12 rounded-md border border-border flex items-center justify-center text-body font-semibold"
           :class="{
             'border-primary text-primary': props.currentStep === index,
             'border-primary bg-primary': props.currentStep > index,

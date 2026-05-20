@@ -104,7 +104,7 @@ const onAfterLeave = (el: Element) => {
 </script>
 
 <template>
-  <div class="w-full bg-surface">
+  <div class="w-full bg-surface border border-border-strong rounded-md overflow-hidden">
     <div v-for="item in items" :key="item.key">
       <!-- Header -->
       <button

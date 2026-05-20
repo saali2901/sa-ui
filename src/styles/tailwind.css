@@ -1,100 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
+
+* { font-family: 'IBM Plex Sans', sans-serif; }
 
 @theme {
   /* ─── Brand: Primary ─── */
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-primary-soft: #eff6ff;
+  --color-primary: #0a0a0a;
+  --color-primary-hover: #2a2a2a;
+  --color-primary-soft: #f4f4f3;
 
   /* ─── Brand: Secondary ─── */
-  --color-secondary: #dbeafe;
-  --color-secondary-hover: #bfdbfe;
-  --color-secondary-text: #1e3a5f;
+  --color-secondary: #f0f0ee;
+  --color-secondary-hover: #e8e8e6;
+  --color-secondary-text: #1a1a1a;
 
   /* ─── Brand: Tertiary ─── */
-  --color-tertiary-border: #60a5fa;
-  --color-tertiary-hover: #eff6ff;
-  --color-tertiary-text: #60a5fa;
+  --color-tertiary-border: #c8c8c6;
+  --color-tertiary-hover: #f4f4f3;
+  --color-tertiary-text: #3a3a3a;
 
   /* ─── Neutral: Surface (Backgrounds) ─── */
   --color-surface: #ffffff;
-  --color-surface-muted: #f9fafb;
-  --color-surface-hover: #f3f4f6;
+  --color-surface-muted: #f4f4f3;
+  --color-surface-hover: #ededeb;
 
   /* ─── Neutral: Border ─── */
-  --color-border: #e5e7eb;
-  --color-border-strong: #9ca3af;
-  --color-border-focus: #3b82f6;
+  --color-border: #e5e5e3;
+  --color-border-strong: #c8c8c6;
+  --color-border-focus: #0a0a0a;
 
   /* ─── Neutral: Foreground (Text) ─── */
-  --color-heading: #111827;
-  --color-body: #4b5563;
-  --color-muted: #9ca3af;
+  --color-heading: #0a0a0a;
+  --color-body: #4a4a4a;
+  --color-muted: #9a9a98;
   --color-on-primary: #ffffff;
 
   /* ─── Status ─── */
-  --color-success-soft: #dcfce7;
-  --color-success-text: #166534;
-  --color-error-soft: #fee2e2;
+  --color-success-soft: #eef7f1;
+  --color-success-text: #196130;
+  --color-error-soft: #fdf2f2;
   --color-error-text: #991b1b;
-  --color-warning-soft: #fef3c7;
-  --color-warning-text: #92400e;
-  --color-info-soft: #dbeafe;
-  --color-info-text: #1e40af;
+  --color-warning-soft: #fdf7ed;
+  --color-warning-text: #854d0e;
+  --color-info-soft: #eff4fd;
+  --color-info-text: #1d4ed8;
+
+  /* ─── Destructive ─── */
+  --color-destructive: #dc2626;
+  --color-destructive-hover: #b91c1c;
 
   /* ─── Tooltip ─── */
-  --color-tooltip: #111827;
-  --color-tooltip-text: #f9fafb;
-}
-
-/* ═══════════════════════════════════════════════════════
-   Dark Mode
-   Activated by adding class="dark" to a parent element
-   (typically <html> or <body>).
-
-   To support OS preference, add this to your app:
-   <script>
-     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-       document.documentElement.classList.add('dark');
-     }
-   </script>
-   ═══════════════════════════════════════════════════════ */
-
-.dark {
-  --color-primary: #3b82f6;
-  --color-primary-hover: #60a5fa;
-  --color-primary-soft: #1e3a5f;
-
-  --color-secondary: #1e3a5f;
-  --color-secondary-hover: #264a6e;
-  --color-secondary-text: #93c5fd;
-
-  --color-tertiary-border: #3b82f6;
-  --color-tertiary-hover: #1e293b;
-  --color-tertiary-text: #93c5fd;
-
-  --color-surface: #0f172a;
-  --color-surface-muted: #1e293b;
-  --color-surface-hover: #334155;
-
-  --color-border: #334155;
-  --color-border-strong: #64748b;
-  --color-border-focus: #3b82f6;
-
-  --color-heading: #f1f5f9;
-  --color-body: #cbd5e1;
-  --color-muted: #94a3b8;
-  --color-on-primary: #ffffff;
-
-  --color-success-soft: #052e16;
-  --color-success-text: #4ade80;
-  --color-error-soft: #450a0a;
-  --color-error-text: #f87171;
-  --color-warning-soft: #451a03;
-  --color-warning-text: #fbbf24;
-  --color-info-soft: #172554;
-  --color-info-text: #60a5fa;
-
-  --color-tooltip: #475569;
-  --color-tooltip-text: #f1f5f9;
+  --color-tooltip: #0a0a0a;
+  --color-tooltip-text: #fafafa;
 }

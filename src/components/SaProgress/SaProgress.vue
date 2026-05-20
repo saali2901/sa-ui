@@ -23,7 +23,7 @@ const percentage = () =>
   Math.min(100, Math.max(0, (props.value / props.max) * 100));
 
 const trackVariants = tv({
-  base: "w-full bg-surface-hover overflow-hidden",
+  base: "w-full bg-secondary overflow-hidden rounded-md",
   variants: {
     size: {
       sm: "h-1",
@@ -34,7 +34,7 @@ const trackVariants = tv({
 });
 
 const barVariants = tv({
-  base: "h-full  duration-300 ease-out",
+  base: "h-full rounded-md duration-300 ease-out",
   variants: {
     color: {
       primary: "bg-primary",

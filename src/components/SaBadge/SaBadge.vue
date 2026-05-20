@@ -5,11 +5,11 @@ import type { HTMLAttributes } from "vue";
 defineOptions({ name: "SaBadge" });
 
 const badgeVariants = tv({
-  base: "rounded-full",
+  base: "rounded uppercase tracking-wider font-medium",
   variants: {
     size: {
       sm: "text-xs px-2 py-1",
-      lg: "text-sm px-3 py-1.5",
+      lg: "text-xs px-3 py-1.5",
       dot: "p-2",
     },
     color: {

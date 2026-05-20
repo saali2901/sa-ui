@@ -17,8 +17,8 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="w-full flex flex-col gap-1">
-    <label v-if="label" class="block text-sm font-medium text-body">
+  <div class="w-full flex flex-col gap-1.5">
+    <label v-if="label" class="uppercase text-xs font-medium tracking-wide text-muted">
       {{ label }}
       <span v-if="required" class="text-error-text">*</span>
     </label>

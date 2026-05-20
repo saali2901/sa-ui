@@ -50,7 +50,7 @@ const tabVariants = tv({
   variants: {
     variant: {
       underline: "border-b-2 -mb-px",
-      pills: "rounded-full",
+      pills: "rounded-md",
     },
     active: {
       true: "",

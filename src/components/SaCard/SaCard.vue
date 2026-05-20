@@ -3,7 +3,7 @@ defineOptions({ name: "SaCard" });
 </script>
 
 <template>
-  <div class="overflow-hidden bg-surface-muted">
+  <div class="overflow-hidden bg-surface border border-border-strong rounded-md shadow-sm">
     <!-- Image -->
     <div
       v-if="$slots.image"

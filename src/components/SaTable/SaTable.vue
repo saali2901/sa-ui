@@ -127,7 +127,7 @@ const rowVariants = tv({
                   :size="12"
                   :class="
                     sortKey === column.key && sortOrder === 'asc'
-                      ? 'text-primary'
+                      ? 'text-heading'
                       : 'text-muted'
                   "
                 />
@@ -136,7 +136,7 @@ const rowVariants = tv({
                   class="-mt-1"
                   :class="
                     sortKey === column.key && sortOrder === 'desc'
-                      ? 'text-primary'
+                      ? 'text-heading'
                       : 'text-muted'
                   "
                 />

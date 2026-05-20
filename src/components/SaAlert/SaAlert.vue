@@ -6,13 +6,13 @@ import type { HTMLAttributes } from "vue";
 defineOptions({ name: "SaAlert" });
 
 const alertVariants = tv({
-  base: "w-full p-4 flex items-start gap-3 text-sm",
+  base: "w-full pl-4 pr-4 py-3 flex items-start gap-3 text-sm border-l-4 rounded-md",
   variants: {
     color: {
-      success: "bg-success-soft text-success-text",
-      error: "bg-error-soft text-error-text",
-      warning: "bg-warning-soft text-warning-text",
-      info: "bg-info-soft text-info-text",
+      success: "bg-success-soft text-success-text border-l-success-text",
+      error: "bg-error-soft text-error-text border-l-error-text",
+      warning: "bg-warning-soft text-warning-text border-l-warning-text",
+      info: "bg-info-soft text-info-text border-l-info-text",
     },
   },
 });

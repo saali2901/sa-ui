@@ -1,7 +1,16 @@
 {
   "name": "@saali2901/sa-ui",
   "description": "Vue.js free to use UI-Library",
-  "keywords": ["UI", "Vue", "Vue.js", "UI-Library", "Tailwind", "CSS", "Components", "Free"],
+  "keywords": [
+    "UI",
+    "Vue",
+    "Vue.js",
+    "UI-Library",
+    "Tailwind",
+    "CSS",
+    "Components",
+    "Free"
+  ],
   "author": {
     "email": "fabian@saali.info",
     "name": "saali"
@@ -24,7 +33,9 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": ["./dist/index.d.ts"]
+      "*": [
+        "./dist/index.d.ts"
+      ]
     }
   },
   "sideEffects": [
@@ -38,23 +49,22 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "story:dev": "histoire dev",
-    "story:build": "histoire build",
-    "story:preview": "histoire preview"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
   },
   "devDependencies": {
-    "@histoire/plugin-vue": "^1.0.0-beta.1",
+    "@storybook/vue3-vite": "^9.1.20",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^25.3.1",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.27",
     "happy-dom": "^20.8.3",
-    "histoire": "^1.0.0-beta.1",
     "postcss": "^8.5.6",
+    "storybook": "^9.1.20",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",

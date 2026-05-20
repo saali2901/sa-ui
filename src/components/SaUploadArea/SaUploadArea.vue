@@ -65,10 +65,10 @@ const handleInputChange = (e: Event) => {
     @drop="handleDrop"
     :class="
       isDragging
-        ? 'bg-primary-soft border-primary'
+        ? 'bg-surface-hover border-border-focus'
         : 'bg-surface border-border-strong'
     "
-    class="w-full border-dashed border-2 h-32 flex flex-col items-center justify-center text-muted cursor-pointer transition-colors duration-200"
+    class="w-full border-dashed border-2 rounded-md h-32 flex flex-col items-center justify-center text-muted cursor-pointer transition-colors duration-200 gap-1"
   >
     <Upload />
     <div class="text-sm">{{ dropText }}</div>

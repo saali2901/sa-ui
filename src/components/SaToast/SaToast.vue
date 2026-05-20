@@ -60,13 +60,13 @@ onUnmounted(() => {
 });
 
 const toastVariants = tv({
-  base: "flex items-center gap-3 px-4 py-3 text-sm shadow-lg border border-border min-w-[300px] max-w-[420px]",
+  base: "flex items-center gap-3 pl-4 pr-4 py-3 text-sm border-l-4 border border-border rounded-md shadow-md min-w-[300px] max-w-[420px]",
   variants: {
     type: {
-      success: "bg-success-soft text-success-text",
-      error: "bg-error-soft text-error-text",
-      warning: "bg-warning-soft text-warning-text",
-      info: "bg-info-soft text-info-text",
+      success: "bg-success-soft text-success-text border-l-success-text",
+      error: "bg-error-soft text-error-text border-l-error-text",
+      warning: "bg-warning-soft text-warning-text border-l-warning-text",
+      info: "bg-info-soft text-info-text border-l-info-text",
     },
   },
 });

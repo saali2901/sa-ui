@@ -101,7 +101,7 @@ const handleBackdropClick = () => {
         <!-- Modal content -->
         <div
           ref="modalRef"
-          class="bg-surface shadow p-6 w-full max-w-md relative z-10 transition-all duration-200"
+          class="bg-surface border border-border-strong rounded-md shadow-md p-6 w-full max-w-md relative z-10 transition-all duration-200"
           role="dialog"
           aria-modal="true"
           @click.stop

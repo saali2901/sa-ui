@@ -15,12 +15,12 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <div v-bind="$attrs">
-    <nav class="flex items-center space-x-2 text-sm" aria-label="Breadcrumb">
+    <nav class="flex items-center text-sm" aria-label="Breadcrumb">
       <template v-for="(item, index) in items" :key="index">
         <a
           v-if="item.href"
           :href="item.href"
-          class="text-muted hover:text-primary hover:cursor-pointer"
+          class="text-muted hover:text-body duration-150"
         >
           {{ item.label }}
         </a>
@@ -33,7 +33,7 @@ withDefaults(defineProps<Props>(), {
         </span>
         <span
           v-if="index < items.length - 1"
-          class="text-muted"
+          class="text-muted mx-2 select-none"
           aria-hidden="true"
         >
           {{ separator }}

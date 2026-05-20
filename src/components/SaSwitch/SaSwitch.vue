@@ -8,6 +8,7 @@ const modelValue = defineModel<boolean>({ default: false });
 
 interface Props {
   label?: string;
+  subtitle?: string;
   name?: string;
   disabled?: boolean;
   size?: "sm" | "md" | "lg";
@@ -15,6 +16,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   label: "",
+  subtitle: undefined,
   name: undefined,
   disabled: false,
   size: "md",
@@ -70,7 +72,37 @@ const thumbVariants = tv({
 </script>
 
 <template>
+  <!-- With subtitle: full-width row layout -->
+  <div
+    v-if="subtitle"
+    class="flex items-center justify-between w-full select-none"
+    :class="{ 'opacity-50 cursor-not-allowed': disabled, 'cursor-pointer': !disabled }"
+    @click.prevent="toggle"
+  >
+    <div class="flex flex-col gap-0.5 pr-4">
+      <span class="text-sm font-semibold text-heading">{{ label }}</span>
+      <span class="text-xs text-muted">{{ subtitle }}</span>
+    </div>
+    <input
+      :id="inputId"
+      v-model="modelValue"
+      type="checkbox"
+      role="switch"
+      :name="name"
+      :disabled="disabled"
+      class="sr-only"
+    />
+    <div
+      :class="trackVariants({ size, checked: modelValue, disabled })"
+      aria-hidden="true"
+    >
+      <span :class="thumbVariants({ size, checked: modelValue })" />
+    </div>
+  </div>
+
+  <!-- Without subtitle: original inline layout -->
   <label
+    v-else
     :for="inputId"
     class="inline-flex items-center gap-2 select-none"
     :class="{

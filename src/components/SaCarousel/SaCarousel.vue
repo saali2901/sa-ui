@@ -168,7 +168,7 @@ const trackStyle = computed(() => ({
 
 // Variants
 const arrowVariants = tv({
-  base: "absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 text-body hover:bg-primary-soft hover:text-heading cursor-pointer duration-200",
+  base: "absolute top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-9 h-9 rounded-md text-heading bg-surface border border-border-strong hover:bg-surface-hover cursor-pointer duration-200",
   variants: {
     position: {
       left: "left-3",
@@ -181,7 +181,7 @@ const arrowVariants = tv({
 });
 
 const indicatorVariants = tv({
-  base: "w-2 h-2 rounded-full cursor-pointer duration-200",
+  base: "w-2 h-2 cursor-pointer duration-200",
   variants: {
     active: {
       true: "bg-primary scale-125",

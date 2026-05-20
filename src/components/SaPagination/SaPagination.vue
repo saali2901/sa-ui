@@ -64,11 +64,11 @@ const pages = computed(() => {
 });
 
 const buttonVariants = tv({
-  base: "inline-flex items-center justify-center w-9 h-9 text-sm font-medium duration-200",
+  base: "inline-flex items-center justify-center w-9 h-9 text-sm font-medium duration-200 rounded-md",
   variants: {
     active: {
       true: "bg-primary text-on-primary",
-      false: "text-body hover:bg-surface-hover",
+      false: "text-body border border-border-strong hover:bg-surface-hover",
     },
     disabled: {
       true: "opacity-40 pointer-events-none",
