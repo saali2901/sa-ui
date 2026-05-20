@@ -7,7 +7,13 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      include: ["src"],
+      include: ["src/**/*.ts", "src/**/*.vue"],
+      exclude: [
+        "src/**/*.stories.ts",
+        "src/**/*.stories.tsx",
+        "src/**/*.stories.js",
+        "src/**/*.stories.jsx",
+      ],
       insertTypesEntry: true,
       tsconfigPath: "./tsconfig.json",
     }),

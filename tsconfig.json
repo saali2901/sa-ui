@@ -26,5 +26,11 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": [
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/**/*.stories.js",
+    "src/**/*.stories.jsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
